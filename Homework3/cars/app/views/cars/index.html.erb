@@ -1,0 +1,8 @@
+<h1>Hello Word</h1>
+<%= link_to 'Add car color', new_car_path %> 
+<%= @cars.each do |car| %>
+	<p>Color: <%= car.color%> </p>
+	<%= link_to 'Show', car %>
+	<%= link_to 'Edit', edit_car_path(car) %>
+	<%= link_to 'Delete', car_path(car), method: :delete %> 
+<% end %>

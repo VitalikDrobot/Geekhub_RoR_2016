@@ -1,0 +1,8 @@
+<h1>All users</h1>
+<%= link_to 'new computer', new_computer_path %>
+<% @computers.each do |computer| %>
+	<p>Computer OS: <%= computer.os %></p>
+	<%= link_to 'Show', computer %>
+	<%= link_to 'Edit', edit_computer_path(computer) %>
+	<%= link_to 'Destroy', computer_path(computer), method: :delete %>
+<% end %>

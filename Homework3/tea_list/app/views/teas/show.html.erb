@@ -1,0 +1,4 @@
+<p>Color tea: <%= @tea.color %></p>
+<%= link_to 'Back', teas_path %>
+<%= link_to 'Edit', edit_tea_path(@tea) %>
+<%= link_to 'Destroy', tea_path(@tea), method: :delete %>

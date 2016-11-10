@@ -1,0 +1,8 @@
+<h2>Тут можна записати вагу картохи</h2>
+<%= link_to 'ввести вагу картохи', new_potato_path %>
+<%= @potatos.each do |potato| %>
+	<p>Вага: <%= potato.mas %></p>
+	<%= link_to 'Show', potato %>
+	<%= link_to 'Edit', edit_potato_path(potato) %>
+	<%= link_to 'Delete', potato_path(potato), method: :delete %>
+<% end %>

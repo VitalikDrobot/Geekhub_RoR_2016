@@ -1,0 +1,8 @@
+<h1>All machine</h1>
+<%= link_to 'Create new users', new_machine_path %>
+<% @machines.each do |machine| %>
+	<p>USize machine: <%= machine.size %></p>
+	<%= link_to 'Show', machine %>
+	<%= link_to 'Edit', edit_machine_path(machine) %>
+	<%= link_to 'Destroy', machine_path(machine), method: :delete %>
+<% end %>

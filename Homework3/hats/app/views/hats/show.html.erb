@@ -1,0 +1,4 @@
+<p>Hat size: <%= @hat.size %> </p>
+<%= link_to 'Back', hats_path %>
+<%= link_to 'Edit', edit_hat_path(@hat) %>
+<%= link_to 'Destroy', hat_path(@hat), method: :delete %>

@@ -1,0 +1,8 @@
+<h1>All tea list</h1>
+<%= link_to 'Add new tea', new_tea_path %>
+<%= @teas.each do |tea| %>
+	<p> Tea color: <%= tea.color %></p>
+	<%= link_to 'Show', tea %>
+	<%= link_to 'Edit', edit_tea_path(tea) %>
+	<%= link_to 'Destroy', tea_path(tea), method: :delete %>
+<% end %>

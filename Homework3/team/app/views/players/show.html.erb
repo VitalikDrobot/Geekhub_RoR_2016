@@ -1,0 +1,4 @@
+<%= @player.name %>
+<%= link_to 'Back', players_path %>
+<%= link_to 'Edit', edit_player_path(@player) %>
+<%= link_to 'Delete', player_path(@player), method: :delete %>

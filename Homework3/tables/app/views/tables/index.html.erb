@@ -1,0 +1,8 @@
+<h1>All table</h1>
+<%= link_to 'add new color table', new_table_path %>
+<% @tables.each do |table| %>
+	<p>color: <%= table.color %> </p>
+	<%= link_to 'Show', table %>
+	<%= link_to 'Edit', edit_table_path(table) %>
+	<%= link_to 'Delete', table_path(table), method: :delete %>
+<% end %>	

@@ -1,0 +1,4 @@
+<p>Music name: <%= @music.name %></p>
+<%= link_to 'Back', new_music_path %>
+<%= link_to 'Edit', edit_music_path(@music) %>
+<%= link_to 'Destroy', music_path(@music), method: :delete %>

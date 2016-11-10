@@ -1,0 +1,8 @@
+<h1>All player</h1>
+<%= link_to 'Add new user', new_player_path %>
+<% @players.each do |player| %>
+	<p>Name: <%= player.name %> </p>
+	<%= link_to 'Show', player %>
+	<%= link_to 'Edit', edit_player_path(player) %>
+	<%= link_to 'Delete', player_path(player), method: :delete %>
+<% end %>

@@ -1,0 +1,4 @@
+<p>Вага в кг:<%= @potato.mas%></p>
+<%= link_to 'Back', potatos_path %>
+<%= link_to 'Edit', edit_potato_path(@potato) %>
+<%= link_to 'Delete', potato_path(@potato), method: :delete %>

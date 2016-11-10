@@ -1,0 +1,4 @@
+<p>Name: <%= @pet.name %></p>
+<%= link_to 'Back', pets_path %>
+<%= link_to 'Edit', edit_pet_path(@pet) %>
+<%= link_to 'Delete', pet_path(@pet), method: :delete %>

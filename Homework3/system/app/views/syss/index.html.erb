@@ -1,0 +1,8 @@
+<h1>All systems:</h1>
+<%= link_to 'add new system', new_sys_path %>
+<% @syss.each do |sys| %>
+	<%= sys.name %>
+	<%= link_to 'Show', sys %>
+	<%= link_to 'Edit', edit_sys_path(sys) %>
+	<%= link_to 'Delete', sys_path(sys) %>
+<% end %>	

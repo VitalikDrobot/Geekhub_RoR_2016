@@ -1,0 +1,8 @@
+<h1>All phones</h1>
+<%= link_to 'Add phone', new_phone_path %>
+<%= @phones.each do |phone| %>
+	<p>Name: <%= phone.name%></p>
+	<%= link_to 'Show', phone %>
+	<%= link_to 'Edit', edit_phone_path(phone) %>
+	<%= link_to 'Delete', phone_path(phone), method: :delete %>
+<% end %>

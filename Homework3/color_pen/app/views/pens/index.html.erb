@@ -1,0 +1,8 @@
+<h1>all pan</h1>
+<%= link_to 'add color', new_pan_path %>
+<% @pans.each do |pan| %>
+	<p>Color: <%= pan.color%></p>
+	<%= link_to 'Show', pan %>
+	<%= link_to 'Edit', edit_pan_path(pan) %>
+	<%= link_to 'Delete', pan_path(pan), metmod: :delete %>
+<% end %>

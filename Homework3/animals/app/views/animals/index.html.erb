@@ -1,0 +1,9 @@
+<h1>All animal</h1>
+<%= link_to 'save new animal', new_animal_path %>
+<%= @animals.each do |animal| %>
+	<p>Name: <%= animal.name %></p>
+	<%= link_to 'Show', animal %>
+	<%= link_to 'Edit', edit_animal_path(animal) %>
+	<%= link_to 'Destroy', animal_path(animal), method: :delete %>
+<% end %>
+

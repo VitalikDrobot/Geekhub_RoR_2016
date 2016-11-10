@@ -1,0 +1,8 @@
+<h1>All hats</h1>
+<%= link_to 'Create new size hat', new_hat_path %>
+<% @hats.each do |hat| %>
+	<p>User email: <%= hat.size %></p>
+	<%= link_to 'Show', hat %>
+	<%= link_to 'Edit', edit_hat_path(hat) %>
+	<%= link_to 'Destroy', hat_path(hat), method: :delete %>
+<% end %>

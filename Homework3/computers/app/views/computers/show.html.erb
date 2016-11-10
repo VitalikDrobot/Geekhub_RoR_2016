@@ -1,0 +1,4 @@
+<p>OS: <%= @computer.os %> </p>
+<%= link_to 'Back', computers_path %>
+	<%= link_to 'Edit', edit_computer_path(@computer) %>
+	<%= link_to 'Destroy', computer_path(@computer), method: :delete %>
