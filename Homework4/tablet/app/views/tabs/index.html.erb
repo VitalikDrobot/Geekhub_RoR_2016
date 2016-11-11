@@ -1,0 +1,14 @@
+<% if current_user %>
+	Signed in: <%= current_user.email %> | <%= link_to 'log out', log_out_path %>
+<% else %>
+	<%= link_to 'Log in', sign_in_path %> | <%= link_to 'Sign up', new_user_path %>	
+<% end %>	
+<h1>All tab</h1>
+
+<%= link_to 'add new tab', new_tab_path %>
+<% @tabs.each do |tab| %>
+	<p>tabs name: <%= tab.name %></p>
+	<%= link_to 'Show', tab %>
+	<%= link_to 'Edit', edit_tab_path(tab) %>
+	<%= link_to 'Delete', tab_path(tab), method: :delete %>
+<% end %>

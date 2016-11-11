@@ -4,5 +4,12 @@ Rails.application.routes.draw do
   		resources :comments
 	end
   root 'articles#index'
+
+  get 'sign_up', to: 'users#new'
+  get 'sign_in', to: 'sessions#new', as: :sign_in
+  post 'create', to: 'sessions#create', as: :sessions
+  get 'log_out', to: 'sessions#destroy', as: :log_out
+
+  resources :users
   
 end

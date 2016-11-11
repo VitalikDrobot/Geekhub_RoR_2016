@@ -1,0 +1,14 @@
+<% if current_user %>
+	Signed: <%= current_user.email %> | <%= link_to 'Log out', log_out_path %>
+<% else %>
+	<%= link_to 'Sign in', sign_in_path %> | <%= link_to 'Sign up', new_user_path %>
+<% end %>
+<h1>All size</h1>
+<%= link_to 'Add new image size', new_image_path %>
+<% @images.each do |image| %>
+	<p>Size: <%= image.size %></p>
+	<%= link_to 'Show', image %>
+	<%= link_to 'Edit', edit_image_path(image) %>
+	<%= link_to 'Delete', image_path(image), method: :delete %>
+
+<% end %>

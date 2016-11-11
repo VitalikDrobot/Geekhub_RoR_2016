@@ -1,5 +1,5 @@
 <h1>Music list</h1>
-<%= link_to 'Add new music', new_music_path %>
+<% link_to 'Add new music', new_music_path %>
 <%= @musics.each do |music| %>
 	<p>Music name: <%= music.name %> </p>
 	<%= link_to 'Show', music %>
